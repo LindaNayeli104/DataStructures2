@@ -1,0 +1,37 @@
+public class isBinaryTree<E extends Comparable<E>> extends MyABB<E> {
+	public isBinaryTree	() {
+		super();
+	}
+	
+	public boolean isBST(MyNodoABB nodo) {
+	
+		if(nodo.izq.info == null && nodo.der.info == null) {
+			return true;
+		}
+		else if(nodo.izq.info.compareTo(nodo.info) < 0 && nodo.der.info == null) {
+			isBST(nodo.izq);
+		}
+		else if(nodo.izq.info == null  && nodo.der.info.compareTo(nodo.info) > 0) {
+			isBST(nodo.der);
+		}
+		else if(nodo.izq.info.compareTo(nodo.info) < 0 && nodo.der.info.compareTo(nodo.info) > 0) {
+			isBST(nodo.izq);
+			isBST(nodo.der);	
+		}
+		else {
+			return false;
+		}
+	}
+
+	public static void main(String[] args) {
+		isBinaryTree<Integer> tree = new isBinaryTree<Integer>();
+		//MyABB<Integer> tree = new MyABB<>();
+		tree.insertar(2);
+		tree.insertar(1);
+		tree.insertar(3);
+
+		//System.out.println(tree.raiz);
+		System.out.println(isBST(tree.raiz));
+
+	}
+}

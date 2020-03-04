@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Backtracking.java&apos; to &apos;Proyecto_Pixelated/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Z_Pocoyo&apos;&#x0D;&#x0A;- Destination element: &apos;Proyecto_Pixelated/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;Backtracking.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=Proyecto_Pixelated/src&lt;" element1="/src&lt;{Backtracking.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1580607502463" units="1" version="1.0"/>
+</session>

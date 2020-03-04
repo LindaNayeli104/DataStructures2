@@ -1,0 +1,33 @@
+
+public class isBinaryTree extends  {
+
+	private E max = null;
+	
+	public boolean isBTS(MyNodoABB<E> current) {
+		if (current == null) {
+			return true;
+		}else {
+			return isBTS(current, current.value);
+		}
+	}
+		
+	
+	
+	private boolean isBTS(MyNodoABB<E> current, E value) {
+		isBTS(current.left, current.left.value);
+		
+		if(current.value.compareTo(max)) {
+			max = current.value;
+		}else {
+			return false;
+		}
+		
+		isBTS(current.right, current.right.value);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}

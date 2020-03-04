@@ -1,0 +1,31 @@
+import java.util.Stack;
+
+public class ValidParentheses {
+	
+	public <E extends Comparable <E>> boolean validar(String phrase) {
+		Stack<E> stack =new Stack<E>();
+		
+		for(int i=0; i < phrase.length(); i++) {
+			char symbol = phrase.charAt(i);9+ k
+			if(symbol == '(' || symbol == '[' || symbol == '{'  ) {
+				stack.add(symbol);
+			}
+			else if(symbol == ')') {
+				
+			}
+			else if(symbol == ']') {
+				
+			}
+			else if(symbol == '}') {
+	
+			}
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+}

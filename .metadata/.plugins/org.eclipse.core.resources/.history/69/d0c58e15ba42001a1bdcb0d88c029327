@@ -1,0 +1,46 @@
+public class isBinaryTree<E extends Comparable<E>>  {
+	MyABB<Integer> arbol; 
+
+	public E max = null;
+
+	public isBinaryTree() {
+		this.arbol = new MyABB<Integer>();
+	}
+	public boolean isBTSprep(MyNodoABB<E> current) {
+		if (current == null) {
+			return true;
+		}else {
+			return isBTS(current);
+		}
+	}
+
+
+
+	private boolean isBTS(MyNodoABB<E> current) {
+		if (current != null) {
+			isBTS(current.izq);
+
+			if(current.info.compareTo(max) > 0) {
+				max = current.info;
+			}else {
+				return false;
+			}
+
+			isBTS(current.der);
+			return true;
+		}
+		return true;
+	}
+
+	public static void main(String[] args) {
+		isBinaryTree<Integer> tree = new isBinaryTree<Integer>();
+		tree.arbol.insertar(2);
+		tree.arbol.insertar(1);
+		tree.arbol.insertar(3);
+
+
+		System.out.println(tree.isBTS(tree.arbol.raiz));
+
+	}
+
+}
